@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vesolar.in/sitemap.xml
+
+# Block unnecessary paths
+Disallow: /_next/
+Disallow: /api/
