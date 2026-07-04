@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -8,7 +9,7 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const SITE_URL = "https://vesolar.in";
+const SITE_URL = "https://ve-solar.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     "Indira Nagar solar",
     "solar energy Lucknow",
     "VE Solar Solutions",
-    "VN Enterprise solar",
+    "Vivek Enterprises solar",
     "residential solar Lucknow",
     "solar rooftop installation UP",
     "PM Surya Ghar subsidy Lucknow",
@@ -100,7 +101,7 @@ const jsonLd = {
       "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#business`,
       name: "VE Solar Solutions",
-      alternateName: "VN Enterprise Solar",
+      alternateName: "Vivek Enterprises",
       description:
         "Lucknow's most trusted solar panel installer since 2003. UPNEDA registered company offering residential and commercial solar rooftop installations with government subsidy assistance.",
       url: SITE_URL,
@@ -241,7 +242,25 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a1628" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* ── Google Analytics 4 ── */}
+        {/* Load gtag.js after the page becomes interactive to avoid blocking render */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-682ZT8ZSQK"
+          strategy="afterInteractive"
+        />
+        {/* Initialize GA4 — fires only once per page load */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-682ZT8ZSQK');
+          `}
+        </Script>
+        {/* ── End Google Analytics 4 ── */}
+        {children}
+      </body>
     </html>
   );
 }

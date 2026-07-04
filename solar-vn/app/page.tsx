@@ -350,7 +350,7 @@ export default function Home() {
                   VE Solar Solutions
                 </p>
                 <p className={`text-xs transition-colors duration-300 ${scrolled || mobileMenuOpen ? 'text-slate-500' : 'text-white/70'}`}>
-                  Since 2003 · Aliganj, Lucknow
+                  A Venture of Vivek Enterprises · Since 2003 · Aliganj, Lucknow
                 </p>
               </div>
             </a>
@@ -700,6 +700,9 @@ export default function Home() {
               <div className="space-y-4 text-base md:text-lg text-slate-600 leading-relaxed mb-8">
                 <p>
                   VE Solar Solutions was founded in 2003 with one mission: provide <strong className="text-[#0a1628]">affordable, reliable solar energy</strong> to Lucknow families. What started as an inverter and battery business has grown into the region&apos;s most trusted solar installation company.
+                </p>
+                <p>
+                  VE Solar Solutions is the solar division of <strong className="text-[#0a1628]">Vivek Enterprises</strong>, serving Lucknow since 2003.
                 </p>
                 <p>
                   Operating from the <strong className="text-[#0a1628]">same Aliganj location for 20+ years</strong>, our reputation is built on quality workmanship, transparent pricing, and genuine after-sales support — not one-time sales. When you call us a year later, we answer.
@@ -1310,6 +1313,13 @@ export default function Home() {
                   bg: 'bg-white/10',
                   color: 'text-blue-400',
                 },
+                {
+                  icon: Shield,
+                  title: 'Registered Business',
+                  content: <p className="text-slate-300">Vivek Enterprises<br /><span className="text-slate-400 text-xs">Operating as VE Solar Solutions</span></p>,
+                  bg: 'bg-white/10',
+                  color: 'text-[#c9970a]',
+                },
               ].map((item) => {
                 const Icon = item.icon;
                 return (
@@ -1522,7 +1532,7 @@ export default function Home() {
 
           {/* Bottom bar */}
           <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-            <p>&copy; {new Date().getFullYear()} VE Solar Solutions (VN Enterprise). All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Vivek Enterprises. Operating as VE Solar Solutions. All rights reserved.</p>
             <p className="text-center">
               UPNEDA Registered Solar Installer · Aliganj, Lucknow, Uttar Pradesh 226020 · India
             </p>
